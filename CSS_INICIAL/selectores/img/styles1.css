@@ -1,0 +1,121 @@
+/* Variables para colores */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: white;
+    --background-color: #f0f0f0;
+    --text-color-primary: #333;
+    --text-color-secondary: #666;
+    --footer-background: #333;
+    --footer-link: #4CAF50;
+    --article-background: #e0e0e0;
+    --article-hover: #d6d6d6;
+}
+
+/* Estilos generales para la página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    line-height: 1.6;
+    color: var(--text-color-primary);
+}
+
+/* Encabezado estilizado */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    height: 15vh;
+    display: flex;
+    align-items: center; /* Centrado vertical del contenido */
+    justify-content: center; /* Centrado horizontal del contenido */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Sección principal */
+main {
+    min-height: 70vh; /* Altura mínima */
+    background-color: var(--secondary-color);
+    padding: 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    text-align: center;
+}
+
+/* Artículos */
+article {
+    background-color: var(--article-background);
+    max-width: 600px; /* Ancho máximo para mayor legibilidad */
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+article:hover {
+    background-color: var(--article-hover);
+    transform: scale(1.02);
+}
+
+/* Texto de los artículos */
+article > h2 {
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+    margin: 0 0 1rem;
+}
+
+article > p {
+    font-size: 1rem;
+    color: var(--text-color-secondary);
+    margin: 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--footer-background);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a {
+    color: var(--footer-link);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    main {
+        padding: 10%;
+    }
+
+    article {
+        width: 90%; /* Ajuste al 90% del ancho del contenedor */
+    }
+
+    article > h2 {
+        font-size: 1.25rem;
+    }
+
+    article > p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,31 @@
+*{
+    color: rgb(63, 61, 61);
+}
+
+
+h1{
+color: mintcream;
+font-style: italic;
+text-align: center;
+
+}
+
+
+.border_redondo{
+border: solid 2pc gray;
+border: radius 15px;
+
+}
+
+#pie{
+background-color: brown;
+color: deepskyblue;
+
+}
+
+
+article img{
+width: 100px;
+
+
+}
